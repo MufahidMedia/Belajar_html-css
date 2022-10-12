@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #d6d2cb;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    width: 100%;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(44, 45, 42, 0.25);
+    padding: 0 30px;
+  }
+  
+  .header-menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .header-menu a {
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    transition: 400ms;
+  }
+  
+  .header-menu a:not(:first-child) {
+    margin-left: 30px;
+  }
+  
+  .header-menu a:hover {
+    color: rgb(121, 121, 121);
+  }
+  
+  .header-icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons svg {
+    width: 18px;
+  }
+  
+  .header-icons svg:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  main {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 62px);
+  }
+  
+  .container {
+    margin-top: 30px;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+  }
+  
+  .product-container {
+    --brightness: 0.75;
+    --grayscale: 1;
+    transition: flex 0.5s, filter 0.5s;
+    height: 100%;
+    filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+    overflow: hidden;
+    flex: 1;
+    width: 100%;
+  }
+  
+  .product-description {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: 0s all;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-container:hover {
+    --brightness: 1;
+    --grayscale: 0;
+    flex: 5;
+  }
+  
+  .product-container img {
+    height: 100%;
+    object-fit: cover;
+    max-inline-size: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .product-container:hover .product-description {
+    opacity: 1;
+    transition-delay: 250ms;
+  }
+  
+  .product-container .product-price {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .highlight-item {
+    background: radial-gradient(#d9cdb8, #c8b99b);
+    margin-top: 100px;
+    padding-top: 50px;
+    width: 100%;
+  }
+  
+  .highlight-item-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .col {
+    flex-basis: 50%;
+    min-width: 300px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #dc8f00;
+    color: #ffffff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: all 0.3s;
+  }
+  
+  .btn:hover {
+    background: #f7ae26;
+  }
+  
+  .highlight-img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .animation-3d {
+    width: 1080px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  model-viewer {
+    overflow-x: hidden;
+    width: 500px;
+    height: 500px;
+  }
